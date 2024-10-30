@@ -1,0 +1,12 @@
+name: victorcandido-portfolio
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./db-data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_USER: victorcandido
+      POSTGRES_DB: portfolio
+    ports:
+      - "5431:5432"
